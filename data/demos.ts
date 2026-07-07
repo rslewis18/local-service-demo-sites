@@ -368,7 +368,7 @@ export const demos: Record<DemoConfig["slug"], DemoConfig> = {
       "Safety-forward electrical site for troubleshooting, panel upgrades, EV charger leads, lighting projects, and quote requests.",
     hero: {
       eyebrow: "Licensed electrical repair and upgrades",
-      title: "Safe, code-ready electrical work without the callback chase.",
+      title: "Safe, reliable electrical work without the callback chase.",
       subtitle:
         "BrightLine Electric helps homeowners schedule panel inspections, troubleshooting, lighting upgrades, EV charger installs, and urgent electrical repairs with confidence.",
       image: "/images/electrical-hero.png",
