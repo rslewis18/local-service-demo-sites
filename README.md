@@ -22,6 +22,7 @@ Each demo uses shared components and data-driven content while keeping the visua
 - Appointment request flow with selectable service times
 - Floating **Call Now** button
 - Interactive AI chat widget mockup with close and reopen states
+- Local image assets stored in `public/images`
 - Lead-generation sales features:
   - Request a Free Quote
   - Book Service Online
@@ -30,7 +31,6 @@ Each demo uses shared components and data-driven content while keeping the visua
   - Google Review Automation
   - Local SEO Ready
   - Mobile-First Design
-- Local image assets stored in `public/images`
 
 ## Local Setup
 
@@ -39,10 +39,9 @@ Requirements:
 - Node.js
 - npm
 
-Install dependencies and start the development server:
+Install dependencies and start the development server from the repository root:
 
 ```bash
-cd local-service-demo-sites
 npm install
 npm run dev
 ```
@@ -84,11 +83,11 @@ Starts the production server after a successful build.
 
 ## Deploy to Vercel
 
-1. Push this project to a GitHub repository.
+1. Push this repository to GitHub.
 2. In Vercel, choose **Add New Project**.
 3. Import the GitHub repository.
-4. Use the default Next.js framework settings.
-5. Confirm the project root is `local-service-demo-sites` if the GitHub repository contains this parent folder.
+4. Keep the project root as the repository root.
+5. Use the default Next.js framework settings.
 6. Deploy.
 
 Vercel will install dependencies and run the production build automatically.
@@ -96,31 +95,32 @@ Vercel will install dependencies and run the production build automatically.
 ## Folder Structure
 
 ```text
-local-service-demo-sites/
-├── app/
-│   ├── electrical/
-│   ├── hvac/
-│   ├── plumbing/
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── AppointmentRequest.tsx
-│   ├── DemoPage.tsx
-│   ├── FloatingActions.tsx
-│   └── QuoteForm.tsx
-├── data/
-│   └── demos.ts
-├── public/
-│   └── images/
-├── styles/
-│   └── globals.css
-├── .gitignore
-├── eslint.config.mjs
-├── next.config.mjs
-├── package-lock.json
-├── package.json
-├── README.md
-└── tsconfig.json
+.
+|-- app/
+|   |-- electrical/
+|   |-- hvac/
+|   |-- plumbing/
+|   |-- layout.tsx
+|   `-- page.tsx
+|-- components/
+|   |-- AppointmentRequest.tsx
+|   |-- DemoPage.tsx
+|   |-- FloatingActions.tsx
+|   `-- QuoteForm.tsx
+|-- data/
+|   `-- demos.ts
+|-- public/
+|   `-- images/
+|-- styles/
+|   `-- globals.css
+|-- .gitignore
+|-- eslint.config.mjs
+|-- next.config.mjs
+|-- package-lock.json
+|-- package.json
+|-- README.md
+|-- tsconfig.json
+`-- vercel.json
 ```
 
 ## Customizing a Demo
