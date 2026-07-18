@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AppointmentRequest } from "@/components/AppointmentRequest";
 import { FloatingActions } from "@/components/FloatingActions";
+import { PortfolioSignature } from "@/components/PortfolioSignature";
 import { QuoteForm } from "@/components/QuoteForm";
 import type { DemoConfig } from "@/data/demos";
 
@@ -109,6 +110,9 @@ export function DemoPage({ demo }: DemoPageProps) {
             <p className="eyebrow">Local reviews</p>
             <h2>{demo.reviewsTitle}</h2>
             <p>{demo.reviewsIntro}</p>
+            <p className="section-note">
+              Sample testimonial content for this fictional demo website.
+            </p>
           </div>
           <div className="review-grid">
             {demo.reviews.map((review) => (
@@ -237,6 +241,7 @@ export function DemoPage({ demo }: DemoPageProps) {
               Demo website created to showcase lead-generation features for
               local service businesses.
             </p>
+            <PortfolioSignature />
           </div>
           <Link href="/">Back to demo directory</Link>
         </div>

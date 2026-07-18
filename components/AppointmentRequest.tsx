@@ -8,7 +8,7 @@ export function AppointmentRequest({
   serviceOptions,
 }: AppointmentRequestProps) {
   return (
-    <form className="appointment-form" action="#booking">
+    <form className="appointment-form" action="#booking" aria-describedby="appointment-demo-note">
       <fieldset className="appointment-slots">
         <legend>Select one available time</legend>
         {bookingSlots.map((slot, index) => (
@@ -26,15 +26,15 @@ export function AppointmentRequest({
 
       <label>
         Name
-        <input name="appointmentName" type="text" placeholder="Your name" />
+        <input name="appointmentName" type="text" placeholder="Your name" required />
       </label>
       <label>
         Phone
-        <input name="appointmentPhone" type="tel" placeholder="(555) 123-4567" />
+        <input name="appointmentPhone" type="tel" placeholder="(555) 123-4567" required />
       </label>
       <label>
         Service Needed
-        <select name="appointmentService" defaultValue="">
+        <select name="appointmentService" defaultValue="" required>
           <option value="" disabled>
             Select a service
           </option>
@@ -49,6 +49,9 @@ export function AppointmentRequest({
       <button className="button button--primary" type="submit">
         Request Appointment
       </button>
+      <p className="form-demo-note" id="appointment-demo-note">
+        Demo request flow. No appointment is confirmed from this page.
+      </p>
     </form>
   );
 }

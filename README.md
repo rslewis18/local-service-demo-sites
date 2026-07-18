@@ -1,6 +1,6 @@
 # Local Service Demo Sites
 
-A Next.js portfolio project with three polished lead-generation website demos for local service businesses. The demos are designed for a local business growth agency to send to HVAC, plumbing, and electrical contractors as realistic examples of conversion-focused service websites.
+A Next.js portfolio workspace for Backend Brilliance demo websites. The root project contains three polished lead-generation demos for local service businesses, and `lumina-aesthetics-demo/` contains an independently deployable premium med spa demo.
 
 ## Project Overview
 
@@ -9,6 +9,10 @@ The project includes a simple landing page plus three industry-specific demo web
 - **Elite Comfort HVAC**: `/hvac`
 - **Precision Flow Plumbing**: `/plumbing`
 - **BrightLine Electric**: `/electrical`
+
+Additional independent demo project:
+
+- **Lumina Aesthetics**: `lumina-aesthetics-demo/`
 
 Each demo uses shared components and data-driven content while keeping the visuals, services, calls-to-action, reviews, FAQs, and trust signals specific to the trade.
 
@@ -83,6 +87,8 @@ Starts the production server after a successful build.
 
 ## Deploy to Vercel
 
+For the root local-service demos:
+
 1. Push this repository to GitHub.
 2. In Vercel, choose **Add New Project**.
 3. Import the GitHub repository.
@@ -91,6 +97,8 @@ Starts the production server after a successful build.
 6. Deploy.
 
 Vercel will install dependencies and run the production build automatically.
+
+For Lumina Aesthetics, create a separate Vercel project and set the project root to `lumina-aesthetics-demo`.
 
 ## Folder Structure
 

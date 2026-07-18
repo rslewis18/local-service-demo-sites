@@ -18,7 +18,7 @@ export function FloatingActions({ phone, phoneHref }: FloatingActionsProps) {
       {isChatOpen ? (
         <aside className="chat-widget" aria-label="AI chat assistant mockup">
           <div className="chat-widget__header">
-            <strong>24/7 AI Assistant</strong>
+            <strong>Demo AI Assistant</strong>
             <button
               aria-label="Minimize AI chat assistant"
               className="chat-widget__close"
@@ -29,6 +29,7 @@ export function FloatingActions({ phone, phoneHref }: FloatingActionsProps) {
             </button>
           </div>
           <p>Hi, I can help you request a quote, book service, or answer common questions.</p>
+          <small>Demonstration only. No live chat messages are sent.</small>
         </aside>
       ) : (
         <button

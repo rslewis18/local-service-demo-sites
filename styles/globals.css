@@ -20,6 +20,11 @@ html {
   scroll-behavior: smooth;
 }
 
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--brand) 70%, white);
+  outline-offset: 3px;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -236,6 +241,12 @@ p {
   cursor: pointer;
   font-weight: 800;
   line-height: 1.1;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
 }
 
 .button--primary {
@@ -316,6 +327,12 @@ p {
 .section-heading {
   max-width: 720px;
   margin-bottom: 34px;
+}
+
+.section-note {
+  margin-top: -12px;
+  color: #6b7280;
+  font-size: 0.92rem;
 }
 
 .card-grid {
@@ -470,6 +487,13 @@ p {
 
 .quote-form__full {
   grid-column: 1 / -1;
+}
+
+.form-demo-note {
+  margin: -4px 0 0;
+  color: #6b7280;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }
 
 .booking-panel {
@@ -660,6 +684,39 @@ details p {
   font-weight: 800;
 }
 
+.home-footer .container {
+  display: block;
+}
+
+.home-footer .portfolio-signature {
+  max-width: 540px;
+}
+
+.portfolio-signature {
+  margin-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 14px;
+}
+
+.portfolio-signature p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.92rem;
+}
+
+.portfolio-signature a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.32);
+  text-underline-offset: 3px;
+}
+
+.portfolio-signature small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.48);
+  line-height: 1.5;
+}
+
 .floating-call {
   position: fixed;
   right: 24px;
@@ -732,6 +789,14 @@ details p {
   line-height: 1.55;
 }
 
+.chat-widget small {
+  display: block;
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .chat-bubble {
   position: fixed;
   right: 24px;
@@ -796,6 +861,17 @@ details p {
 .demo-card:focus-visible {
   transform: translateY(-3px);
   box-shadow: var(--shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 .demo-card img {

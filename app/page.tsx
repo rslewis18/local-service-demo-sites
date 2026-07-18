@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { PortfolioSignature } from "@/components/PortfolioSignature";
 import { demoList } from "@/data/demos";
 
 export default function HomePage() {
@@ -48,6 +49,8 @@ export default function HomePage() {
                   alt={demo.hero.imageAlt}
                   width={720}
                   height={420}
+                  loading="eager"
+                  unoptimized
                   sizes="(max-width: 680px) 100vw, (max-width: 980px) 50vw, 33vw"
                 />
                 <span>{demo.industryLabel}</span>
@@ -59,6 +62,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <footer className="site-footer home-footer">
+        <div className="container">
+          <p>Backend Brilliance demo directory for local service businesses.</p>
+          <PortfolioSignature />
+        </div>
+      </footer>
     </main>
   );
 }

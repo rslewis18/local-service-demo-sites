@@ -4,14 +4,14 @@ type QuoteFormProps = {
 
 export function QuoteForm({ serviceOptions }: QuoteFormProps) {
   return (
-    <form className="quote-form" action="#quote">
+    <form className="quote-form" action="#quote" aria-describedby="quote-demo-note">
       <label>
         Name
-        <input name="name" type="text" placeholder="Your name" />
+        <input name="name" type="text" placeholder="Your name" required />
       </label>
       <label>
         Phone
-        <input name="phone" type="tel" placeholder="(555) 123-4567" />
+        <input name="phone" type="tel" placeholder="(555) 123-4567" required />
       </label>
       <label>
         Email
@@ -19,7 +19,7 @@ export function QuoteForm({ serviceOptions }: QuoteFormProps) {
       </label>
       <label>
         Service Needed
-        <select name="service" defaultValue="">
+        <select name="service" defaultValue="" required>
           <option value="" disabled>
             Select a service
           </option>
@@ -45,6 +45,9 @@ export function QuoteForm({ serviceOptions }: QuoteFormProps) {
       <button className="button button--primary quote-form__full" type="submit">
         Request a Free Quote
       </button>
+      <p className="form-demo-note quote-form__full" id="quote-demo-note">
+        Demo lead form. No information is sent unless a real endpoint is added.
+      </p>
     </form>
   );
 }
